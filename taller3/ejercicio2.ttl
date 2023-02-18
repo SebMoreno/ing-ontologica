@@ -1,0 +1,42 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix : <http://ing.ontologica.org/Teatro#> .
+
+:Persona rdf:type rdfs:Class .
+:Actor
+    rdf:type rdfs:Class;
+    rdfs:subClassOf :Persona .
+:Personaje
+    rdf:type rdfs:Class;
+    rdfs:subClassOf :Actor .
+:Pelicula rdf:type rdfs:Class .
+
+:tienePersonaje 
+    rdf:type rdf:Property;
+    rdfs:domain :Pelicula;
+    rdfs:range :Personaje .
+
+:interpreta
+    rdf:type rdf:Property;
+    rdfs:domain :Actor;
+    rdfs:range :Personaje .
+
+:anio
+    rdf:type rdf:Property;
+    rdfs:range xs:integer .
+
+:anioNacimiento
+    rdf:type rdf:Property;
+    rdfs:domain :Persona;
+    rdfs:subPropertyOf :anio .
+
+:amigo
+    rdf:type rdf:Property;
+    rdfs:domain :Persona;
+    rdfs:range :Persona .
+
+:nombre
+    rdf:type rdf:Property;
+    rdfs:domain :Persona, :Pelicula;
+    rdfs:range xs:string .

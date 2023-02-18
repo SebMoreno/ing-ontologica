@@ -1,0 +1,49 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://ing.ontologica.org/Teatro#> .
+
+:Carlos
+    a :Persona;
+    :nombre "Carlos Ernesto";
+    :anioNacimiento 2000;
+    rdfs:comment "Carlos es una persona normal".
+
+:RobertDR
+    a :Actor;
+    :nombre "Robert Downey Jr";
+    :interpreta :IronMan;
+    :anioNacimiento 1965;
+    rdfs:comment "Robert es el actor mas famoso de Marvel Studios".
+:Scarlet
+    a :Actor;
+    :interpreta :BlackWidow;
+    :nombre "Scarlet Johanson";
+    :anioNacimiento 1984;
+    :amigo :ChrisEvans;
+    rdfs:comment "Scarlet esta peleada con Marvel Studios".
+:ChrisEvans
+    a :Actor;
+    :nombre "Chris Evans";
+    :interpreta :CapAmerica;
+    :anioNacimiento 1981;
+    :amigo :Scarlet;
+    rdfs:comment "Chris es amado por audiencia y estudio".
+
+:IronMan
+    a :Personaje;
+    rdfs:comment "Este es el personaje mas importante de Marvel Studios".
+:BlackWidow
+    a :Personaje;
+    rdfs:comment "Fue el personaje femenino mas querido".
+:CapAmerica
+    a :Personaje;
+    rdfs:comment "Es el lider de los Vengadores".
+
+:Avengers
+    a :Pelicula;
+    rdfs:comment "Fue la pelicula mas importante en el inicio de Marvel Studios";
+    :tienePersonaje
+        :IronMan,
+        :BlackWidow,
+        :CapAmerica.
+

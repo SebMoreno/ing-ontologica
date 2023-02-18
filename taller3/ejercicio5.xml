@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://ing.ontologica.org/Teatro#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <rdf:Description rdf:about="http://ing.ontologica.org/Teatro#Carlos">
+    <rdf:type rdf:resource="http://ing.ontologica.org/Teatro#Persona"/>
+    <ns0:nombre>Carlos Ernesto</ns0:nombre>
+    <ns0:anioNacimiento rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</ns0:anioNacimiento>
+    <rdfs:comment>Carlos es una persona normal</rdfs:comment>
+  </rdf:Description>
+
+  <ns0:Actor rdf:about="http://ing.ontologica.org/Teatro#RobertDR">
+    <ns0:nombre>Robert Downey Jr</ns0:nombre>
+    <ns0:interpreta rdf:resource="http://ing.ontologica.org/Teatro#IronMan"/>
+    <ns0:anioNacimiento rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1965</ns0:anioNacimiento>
+    <rdfs:comment>Robert es el actor mas famoso de Marvel Studios</rdfs:comment>
+  </ns0:Actor>
+
+  <ns0:Actor rdf:about="http://ing.ontologica.org/Teatro#Scarlet">
+    <ns0:interpreta rdf:resource="http://ing.ontologica.org/Teatro#BlackWidow"/>
+    <ns0:nombre>Scarlet Johanson</ns0:nombre>
+    <ns0:anioNacimiento rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1984</ns0:anioNacimiento>
+    <ns0:amigo>
+      <ns0:Actor rdf:about="http://ing.ontologica.org/Teatro#ChrisEvans">
+        <ns0:nombre>Chris Evans</ns0:nombre>
+        <ns0:interpreta rdf:resource="http://ing.ontologica.org/Teatro#CapAmerica"/>
+        <ns0:anioNacimiento rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</ns0:anioNacimiento>
+        <ns0:amigo rdf:resource="http://ing.ontologica.org/Teatro#Scarlet"/>
+        <rdfs:comment>Chris es amado por audiencia y estudio</rdfs:comment>
+      </ns0:Actor>
+    </ns0:amigo>
+
+    <rdfs:comment>Scarlet esta peleada con Marvel Studios</rdfs:comment>
+  </ns0:Actor>
+
+  <ns0:Personaje rdf:about="http://ing.ontologica.org/Teatro#IronMan">
+    <rdfs:comment>Este es el personaje mas importante de Marvel Studios</rdfs:comment>
+  </ns0:Personaje>
+
+  <ns0:Personaje rdf:about="http://ing.ontologica.org/Teatro#BlackWidow">
+    <rdfs:comment>Fue el personaje femenino mas querido</rdfs:comment>
+  </ns0:Personaje>
+
+  <ns0:Personaje rdf:about="http://ing.ontologica.org/Teatro#CapAmerica">
+    <rdfs:comment>Es el lider de los Vengadores</rdfs:comment>
+  </ns0:Personaje>
+
+  <ns0:Pelicula rdf:about="http://ing.ontologica.org/Teatro#Avengers">
+    <rdfs:comment>Fue la pelicula mas importante en el inicio de Marvel Studios</rdfs:comment>
+    <ns0:tienePersonaje rdf:resource="http://ing.ontologica.org/Teatro#IronMan"/>
+    <ns0:tienePersonaje rdf:resource="http://ing.ontologica.org/Teatro#BlackWidow"/>
+    <ns0:tienePersonaje rdf:resource="http://ing.ontologica.org/Teatro#CapAmerica"/>
+  </ns0:Pelicula>
+
+</rdf:RDF>

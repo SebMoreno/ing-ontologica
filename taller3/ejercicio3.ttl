@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://ing.ontologica.org/Teatro#> .
+
+:Carlos
+    a :Persona;
+    :nombre "Carlos Ernesto";
+    :anioNacimiento 2000.
+
+:RobertDR
+    a :Actor;
+    :nombre "Robert Downey Jr";
+    :interpreta :IronMan;
+    :anioNacimiento 1965.
+:Scarlet
+    a :Actor;
+    :interpreta :BlackWidow;
+    :nombre "Scarlet Johanson";
+    :anioNacimiento 1984;
+    :amigo :ChrisEvans.
+:ChrisEvans
+    a :Actor;
+    :nombre "Chris Evans";
+    :interpreta :CapAmerica;
+    :anioNacimiento 1981;
+    :amigo :Scarlet.
+
+:IronMan a :Personaje.
+:BlackWidow a :Personaje.
+:CapAmerica a :Personaje.
+
+:Avengers
+    a :Pelicula;
+    :tienePersonaje
+        :IronMan,
+        :BlackWidow,
+        :CapAmerica.
+
