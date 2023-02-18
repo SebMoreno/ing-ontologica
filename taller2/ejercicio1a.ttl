@@ -1,0 +1,21 @@
+@prefix book: <https://books.org/> .
+
+book:Hamlet
+    book:ISBN 1613820917;
+    book:titulo "Hamlet";
+    book:autor "W. Shakespeare";
+    book:paginas 330;
+    book:edicion "N.D";
+    book:editorial "Simon and Brown";
+    book:aniopublicacion 2011;
+    book:idioma "Ingles".
+
+book:LordOfTheRing
+    book:ISBN 8532135;
+    book:titulo "El señor de los anillos";
+    book:autor "J.R.R.Tolkien";
+    book:paginas 630;
+    book:edicion "Primera";
+    book:editorial "Booket";
+    book:aniopublicacion 2015;
+    book:idioma "Español".

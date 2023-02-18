@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <https://party.org/> .
+
+:YearEndEvent
+    :invitados [
+        a rdf:Seq ;
+        rdf:_1 :VonNewman ;
+        rdf:_2 :SteveJobs ;
+        rdf:_3 :AlanTuring
+    ] ;
+    :fecha[
+        :dia [
+            a rdf:Alt ;
+            rdf:_1 :Lunes ;
+            rdf:_2 :Martes ;
+            rdf:_3 :Miercoles ;
+            rdf:_4 :Jueves ;
+            rdf:_5 :Viernes ;
+            rdf:_6 :Sabado ;
+            rdf:_7 :Domingo
+        ] ;
+        :mes [
+            a rdf:Alt ;
+            rdf:_1 :Enero ;
+            rdf:_2 :Febrero ;
+            rdf:_3 :Marzo ;
+            rdf:_4 :Abril ;
+            rdf:_5 :Mayo ;
+            rdf:_6 :Junio ;
+            rdf:_7 :Julio ;
+            rdf:_8 :Agosto ;
+            rdf:_9 :Septiembre ;
+            rdf:_10 :Octubre ;
+            rdf:_11 :Noviembre ;
+            rdf:_12 :Diciembre
+        ]
+    ] ;
+    :empleados [
+        :meseros (:Carlos :Andrea) ;
+        :ayudantes (:Felipe :Daniela)
+    ] .

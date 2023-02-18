@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="https://books.org/">
+<!-- Se puede observar que cada tag del documento tiene el atributo rdf>datatype correspondiente -->
+  <rdf:Description rdf:about="https://books.org/Hamlet">
+    <ns0:ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1613820917</ns0:ISBN>
+    <ns0:titulo rdf:datatype="http://www.w3c.org/2001/XMLSchema#string">Hamlet</ns0:titulo>
+    <ns0:autor rdf:datatype="http://www.w3c.org/2001/XMLSchema#string">W. Shakespeare</ns0:autor>
+    <ns0:paginas rdf:datatype="http://www.w3c.org/2001/XMLSchema#integer">330</ns0:paginas>
+    <ns0:edicion rdf:datatype="http://www.w3c.org/2001/XMLSchema#string">N.D</ns0:edicion>
+    <ns0:editorial rdf:datatype="http://www.w3c.org/2001/XMLSchema#string">Simon and Brown</ns0:editorial>
+    <ns0:aniopublicacion rdf:datatype="http://www.w3c.org/2001/XMLSchema#integer">2011</ns0:aniopublicacion>
+    <ns0:idioma rdf:datatype="http://www.w3c.org/2001/XMLSchema#string">Ingles</ns0:idioma>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://books.org/LordOfTheRing">
+    <ns0:ISBN rdf:datatype="http://www.w3c.org/2001/XMLSchema#integer">8532135</ns0:ISBN>
+    <ns0:titulo rdf:datatype="http://www.w3c.org/2001/XMLSchema#string">El señor de los anillos</ns0:titulo>
+    <ns0:autor rdf:datatype="http://www.w3c.org/2001/XMLSchema#string">J.R.R.Tolkien</ns0:autor>
+    <ns0:paginas rdf:datatype="http://www.w3c.org/2001/XMLSchema#integer">630</ns0:paginas>
+    <ns0:edicion rdf:datatype="http://www.w3c.org/2001/XMLSchema#string">Primera</ns0:edicion>
+    <ns0:editorial rdf:datatype="http://www.w3c.org/2001/XMLSchema#string">Booket</ns0:editorial>
+    <ns0:aniopublicacion rdf:datatype="http://www.w3c.org/2001/XMLSchema#integer">2015</ns0:aniopublicacion>
+    <ns0:idioma rdf:datatype="http://www.w3c.org/2001/XMLSchema#string">Español</ns0:idioma>
+  </rdf:Description>
+
+</rdf:RDF>

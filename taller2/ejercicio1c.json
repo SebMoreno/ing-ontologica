@@ -1,0 +1,24 @@
+[
+  {
+    "@id": "https://books.org/Hamlet",
+    "https://books.org/ISBN": [{ "@value": 1613820917 }],
+    "https://books.org/titulo": [{ "@value": "Hamlet" }],
+    "https://books.org/autor": [{ "@value": "W. Shakespeare" }],
+    "https://books.org/paginas": [{ "@value": 330 }],
+    "https://books.org/edicion": [{ "@value": "N.D" }],
+    "https://books.org/editorial": [{ "@value": "Simon and Brown" }],
+    "https://books.org/aniopublicacion": [{ "@value": 2011 }],
+    "https://books.org/idioma": [{ "@value": "Ingles" }]
+  },
+  {
+    "@id": "https://books.org/LordOfTheRing",
+    "https://books.org/ISBN": [{ "@value": 8532135 }],
+    "https://books.org/titulo": [{ "@value": "El señor de los anillos" }],
+    "https://books.org/autor": [{ "@value": "J.R.R.Tolkien" }],
+    "https://books.org/paginas": [{ "@value": 630 }],
+    "https://books.org/edicion": [{ "@value": "Primera" }],
+    "https://books.org/editorial": [{ "@value": "Booket" }],
+    "https://books.org/aniopublicacion": [{ "@value": 2015 }],
+    "https://books.org/idioma": [{ "@value": "Español" }]
+  }
+]

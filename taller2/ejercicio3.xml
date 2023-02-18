@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:ns0="https://books.org/">
+  <rdf:Description rdf:about="https://books.org/Hamlet">
+    <ns0:ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1613820917</ns0:ISBN>
+    <ns0:titulo>Hamlet</ns0:titulo>
+    <ns0:autor>
+      <rdf:Description>
+        <ns0:nombre>W. Shakespeare</ns0:nombre>
+        <ns0:anioNacimiento>1565</ns0:anioNacimiento>
+        <ns0:pais>Inglaterra</ns0:pais>
+      </rdf:Description>
+    </ns0:autor>
+    <ns0:paginas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">330</ns0:paginas>
+    <ns0:edicion>N.D</ns0:edicion>
+    <ns0:editorial>Simon and Brown</ns0:editorial>
+    <ns0:aniopublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</ns0:aniopublicacion>
+    <ns0:idioma>Ingles</ns0:idioma>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://books.org/LordOfTheRing">
+    <ns0:ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8532135</ns0:ISBN>
+    <ns0:titulo>El señor de los anillos</ns0:titulo>
+    <ns0:autor>
+      <rdf:Description>
+        <ns0:nombre>J.R.R.Tolkien</ns0:nombre>
+        <ns0:anioNacimiento>1892</ns0:anioNacimiento>
+        <ns0:pais>Sudafrica</ns0:pais>
+      </rdf:Description>
+    </ns0:autor>
+    <ns0:paginas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">630</ns0:paginas>
+    <ns0:edicion>Primera</ns0:edicion>
+    <ns0:editorial>Booket</ns0:editorial>
+    <ns0:aniopublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ns0:aniopublicacion>
+    <ns0:idioma>Español</ns0:idioma>
+  </rdf:Description>
+</rdf:RDF>
