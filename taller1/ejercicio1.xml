@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SISTEMAS DE RECUPERACION WEB -->
+<libros xmlns="https://books.org/">
+   <libro ISBN="1613829017">
+      <titulo>Hamlet</titulo>
+      <autor>W. Shakespeare</autor>
+      <paginas>330</paginas>
+      <editorial>Simon &amp; Brown</editorial>
+   </libro>
+   <libro ISBN="9789584254726">
+      <titulo>La sombra del viento</titulo>
+      <autor>Carlos Ruiz Zafon</autor>
+      <paginas>575</paginas>
+      <editorial>Planeta Booket</editorial>
+   </libro>
+   <libro ISBN="0765367297">
+      <titulo>&lt; Halo &gt;: The Fall of Reach</titulo>
+      <autor>Eric Nylund</autor>
+      <paginas>448</paginas>
+      <editorial>Tor Books</editorial>
+   </libro>
+</libros>

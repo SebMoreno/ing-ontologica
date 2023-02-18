@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+    <libro id="1" paginas="200" edicion="primera">
+        <autor>Michel</autor>
+        <idioma>Spanish</idioma>
+        <editorial>El Planeta</editorial>
+    </libro>
+    <libro id="1" paginas="200" edicion="primera">
+        <autor>Carlos</autor>
+        <idioma>English</idioma>
+        <editorial>Santillana</editorial>
+    </libro>
+    <libro id="1" paginas="200" edicion="primera">
+        <autor>Camila</autor>
+        <idioma>Portuguese</idioma>
+        <editorial>Santillana</editorial>
+    </libro>
+    <libro id="1" paginas="200" edicion="primera">
+        <autor>Andrea</autor>
+        <idioma>Portuguese</idioma>
+        <editorial>El Planeta</editorial>
+    </libro>
+    <libro id="1" paginas="200" edicion="primera">
+        <autor>Estefania</autor>
+        <idioma>Spanish</idioma>
+        <editorial>El Planeta</editorial>
+    </libro>
+</libros>

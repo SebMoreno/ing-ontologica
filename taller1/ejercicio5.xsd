@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="familia">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="persona" minOccurs="4" maxOccurs="4">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre"></xs:element>
+                            <xs:element name="apellido"></xs:element>
+                            <xs:element name="edad">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="0"></xs:minInclusive>
+                                        <xs:maxInclusive value="120"></xs:maxInclusive>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="hijo" minOccurs="2" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:choice>
+                                        <xs:element name="nombre"></xs:element>
+                                        <xs:element name="edad">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="0"></xs:minInclusive>
+                                                    <xs:maxInclusive value="120"></xs:maxInclusive>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:choice>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="mesnacimiento">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Enero" />
+                                        <xs:enumeration value="Febrero" />
+                                        <xs:enumeration value="Marzo" />
+                                        <xs:enumeration value="Abril" />
+                                        <xs:enumeration value="Mayo" />
+                                        <xs:enumeration value="Junio" />
+                                        <xs:enumeration value="Julio" />
+                                        <xs:enumeration value="Agosto" />
+                                        <xs:enumeration value="Septiembre" />
+                                        <xs:enumeration value="Octubre" />
+                                        <xs:enumeration value="Noviembe" />
+                                        <xs:enumeration value="Diciembre" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
