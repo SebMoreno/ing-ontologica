@@ -1,0 +1,535 @@
+@prefix : <http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/> .
+
+<http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#has_Country_Of_Origin
+:has_Country_Of_Origin rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/has-Base
+:has-Base rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :has-Ingredient ;
+          owl:inverseOf :is-Base-Of ;
+          rdf:type owl:FunctionalProperty ;
+          rdfs:domain :Pizza ;
+          rdfs:range :Pizza-Base .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/has-Ingredient
+:has-Ingredient rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                owl:inverseOf :is-Ingredient-Of .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/has-Topping
+:has-Topping rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :has-Ingredient ;
+             owl:inverseOf :is-Topping-Of ;
+             rdfs:domain :Pizza ;
+             rdfs:range :Pizza-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/is-Base-Of
+:is-Base-Of rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :is-Ingredient-Of .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/is-Ingredient-Of
+:is-Ingredient-Of rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdf:type owl:TransitiveProperty .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/is-Topping-Of
+:is-Topping-Of rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :is-Ingredient-Of .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#has_Calorific_Content_Value
+:has_Calorific_Content_Value rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :Pizza ;
+                             rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Country
+:Country rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:oneOf ( :America
+                                           :England
+                                           :France
+                                           :Germany
+                                           :Italy
+                                         )
+                             ] .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Four_cheese_Pizza
+:Four_cheese_Pizza rdf:type owl:Class ;
+                   rdfs:subClassOf :Pizza ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :has-Topping ;
+                                     owl:qualifiedCardinality "4"^^xsd:nonNegativeInteger ;
+                                     owl:onClass :Cheese-Topping
+                                   ] .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#High_Calorie_Pizza
+:High_Calorie_Pizza rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :has_Calorific_Content_Value ;
+                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                               owl:onDatatype xsd:int ;
+                                                               owl:withRestrictions ( [ xsd:minInclusive "400"^^xsd:int
+                                                                                      ]
+                                                                                    )
+                                                             ]
+                                        ] ;
+                    rdfs:subClassOf :Pizza .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Interesting_Pizza
+:Interesting_Pizza rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty :has-Topping ;
+                                         owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :Pizza-Topping
+                                       ] ;
+                   rdfs:subClassOf :Pizza .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Non_Vegetarian_Pizza
+:Non_Vegetarian_Pizza rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                                 [ rdf:type owl:Class ;
+                                                                   owl:complementOf :Vegetarian_Pizza
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf :Pizza ;
+                      owl:disjointWith :Vegetarian_Pizza .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Unclosed_Pizza
+:Unclosed_Pizza rdf:type owl:Class ;
+                rdfs:subClassOf :Named-Pizza ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :has-Topping ;
+                                  owl:someValuesFrom :Mozzarella-Topping
+                                ] .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Vegetarian_Pizza
+:Vegetarian_Pizza rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :has-Topping ;
+                                                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( :Cheese-Topping
+                                                                                                 :Vegetable-Topping
+                                                                                               )
+                                                                                 ]
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/American-Hot-Pizza
+:American-Hot-Pizza rdf:type owl:Class ;
+                    rdfs:subClassOf :Named-Pizza ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has-Topping ;
+                                      owl:someValuesFrom :Jalapeno-Pepper-Topping
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has-Topping ;
+                                      owl:someValuesFrom :Mozzarella-Topping
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has-Topping ;
+                                      owl:someValuesFrom :Pepperoni-Topping
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has-Topping ;
+                                      owl:someValuesFrom :Tomato-Topping
+                                    ] .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/American-Pizza
+:American-Pizza rdf:type owl:Class ;
+                rdfs:subClassOf :Named-Pizza ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :has-Topping ;
+                                  owl:someValuesFrom :Mozzarella-Topping
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :has-Topping ;
+                                  owl:someValuesFrom :Pepperoni-Topping
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :has-Topping ;
+                                  owl:someValuesFrom :Tomato-Topping
+                                ] .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Anchovy-Topping
+:Anchovy-Topping rdf:type owl:Class ;
+                 rdfs:subClassOf :Seafood-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Caper-Topping
+:Caper-Topping rdf:type owl:Class ;
+               rdfs:subClassOf :Vegetable-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Cheese-Topping
+:Cheese-Topping rdf:type owl:Class ;
+                rdfs:subClassOf :Pizza-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Cheesy-Pizza
+:Cheesy-Pizza rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :has-Topping ;
+                                                           owl:someValuesFrom :Cheese-Topping
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :Pizza .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Deep-Pan-Base
+:Deep-Pan-Base rdf:type owl:Class ;
+               rdfs:subClassOf :Pizza-Base ;
+               owl:disjointWith :Thin-And-Crispy-Base .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Green-Pepper-Topping
+:Green-Pepper-Topping rdf:type owl:Class ;
+                      rdfs:subClassOf :Pepper-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Ham-Topping
+:Ham-Topping rdf:type owl:Class ;
+             rdfs:subClassOf :Meat-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Jalapeno-Pepper-Topping
+:Jalapeno-Pepper-Topping rdf:type owl:Class ;
+                         rdfs:subClassOf :Pepper-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Margherita-Pizza
+:Margherita-Pizza rdf:type owl:Class ;
+                  rdfs:subClassOf :Named-Pizza ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has-Topping ;
+                                    owl:someValuesFrom :Mozzarella-Topping
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has-Topping ;
+                                    owl:someValuesFrom :Tomato-Topping
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has-Topping ;
+                                    owl:allValuesFrom [ rdf:type owl:Class ;
+                                                        owl:unionOf ( :Mozzarella-Topping
+                                                                      :Tomato-Topping
+                                                                    )
+                                                      ]
+                                  ] .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Meat-Topping
+:Meat-Topping rdf:type owl:Class ;
+              rdfs:subClassOf :Pizza-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Mozzarella-Topping
+:Mozzarella-Topping rdf:type owl:Class ;
+                    rdfs:subClassOf :Cheese-Topping ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has_Country_Of_Origin ;
+                                      owl:hasValue :Italy
+                                    ] ;
+                    owl:disjointWith :Parmezan-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Mushroom-Topping
+:Mushroom-Topping rdf:type owl:Class ;
+                  rdfs:subClassOf :Vegetable-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Named-Pizza
+:Named-Pizza rdf:type owl:Class ;
+             rdfs:subClassOf :Pizza .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Olive-Topping
+:Olive-Topping rdf:type owl:Class ;
+               rdfs:subClassOf :Vegetable-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Onion-Topping
+:Onion-Topping rdf:type owl:Class ;
+               rdfs:subClassOf :Vegetable-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Parmezan-Topping
+:Parmezan-Topping rdf:type owl:Class ;
+                  rdfs:subClassOf :Cheese-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Pepper-Topping
+:Pepper-Topping rdf:type owl:Class ;
+                rdfs:subClassOf :Vegetable-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Pepperoni-Topping
+:Pepperoni-Topping rdf:type owl:Class ;
+                   rdfs:subClassOf :Meat-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Pizza
+:Pizza rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :has-Base ;
+                         owl:someValuesFrom :Pizza-Base
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :has_Calorific_Content_Value ;
+                         owl:someValuesFrom xsd:int
+                       ] .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Pizza-Base
+:Pizza-Base rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Pizza-Topping
+:Pizza-Topping rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Prawn-Topping
+:Prawn-Topping rdf:type owl:Class ;
+               rdfs:subClassOf :Seafood-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Probe-Inconsistent-Topping
+:Probe-Inconsistent-Topping rdf:type owl:Class ;
+                            rdfs:subClassOf :Cheese-Topping ,
+                                            :Vegetable-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Red-Pepper-opping
+:Red-Pepper-opping rdf:type owl:Class ;
+                   rdfs:subClassOf :Pepper-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Salami-Topping
+:Salami-Topping rdf:type owl:Class ;
+                rdfs:subClassOf :Meat-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Seafood-Topping
+:Seafood-Topping rdf:type owl:Class ;
+                 rdfs:subClassOf :Pizza-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Soho-Pizza
+:Soho-Pizza rdf:type owl:Class ;
+            rdfs:subClassOf :Named-Pizza ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has-Topping ;
+                              owl:someValuesFrom :Mozzarella-Topping
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has-Topping ;
+                              owl:someValuesFrom :Olive-Topping
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has-Topping ;
+                              owl:someValuesFrom :Parmezan-Topping
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has-Topping ;
+                              owl:someValuesFrom :Tomato-Topping
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has-Topping ;
+                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :Mozzarella-Topping
+                                                                :Olive-Topping
+                                                                :Parmezan-Topping
+                                                                :Tomato-Topping
+                                                              )
+                                                ]
+                            ] .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Spicy-Beef-Topping
+:Spicy-Beef-Topping rdf:type owl:Class ;
+                    rdfs:subClassOf :Meat-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Thin-And-Crispy-Base
+:Thin-And-Crispy-Base rdf:type owl:Class ;
+                      rdfs:subClassOf :Pizza-Base .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Tomato-Topping
+:Tomato-Topping rdf:type owl:Class ;
+                rdfs:subClassOf :Vegetable-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Tuna-Topping
+:Tuna-Topping rdf:type owl:Class ;
+              rdfs:subClassOf :Seafood-Topping .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas/Vegetable-Topping
+:Vegetable-Topping rdf:type owl:Class ;
+                   rdfs:subClassOf :Pizza-Topping .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#America
+:America rdf:type owl:NamedIndividual ,
+                  :Country .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#England
+:England rdf:type owl:NamedIndividual ,
+                  :Country .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#France
+:France rdf:type owl:NamedIndividual ,
+                 :Country .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Germany
+:Germany rdf:type owl:NamedIndividual ,
+                  :Country .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Italy
+:Italy rdf:type owl:NamedIndividual ,
+                :Country .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Pizza_Cheese
+:Pizza_Cheese rdf:type owl:NamedIndividual ,
+                       :Pizza ;
+              :has_Calorific_Content_Value 400 .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Pizza_Chicken
+:Pizza_Chicken rdf:type owl:NamedIndividual ,
+                        :Pizza ;
+               :has_Calorific_Content_Value 350 .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Pizza_Margherita
+:Pizza_Margherita rdf:type owl:NamedIndividual ,
+                           :Pizza ;
+                  :has_Calorific_Content_Value 237 .
+
+
+###  http://www.semanticweb.org/estudiante/ontologies/2023/1/Onto-Pizzas#Pizza_Quattro_Formaggio
+:Pizza_Quattro_Formaggio rdf:type owl:NamedIndividual ,
+                                  :Pizza ;
+                         :has_Calorific_Content_Value 732 .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :American-Hot-Pizza
+                :American-Pizza
+                :Margherita-Pizza
+                :Soho-Pizza
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Anchovy-Topping
+                :Prawn-Topping
+                :Tuna-Topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Caper-Topping
+                :Mushroom-Topping
+                :Olive-Topping
+                :Onion-Topping
+                :Pepper-Topping
+                :Tomato-Topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cheese-Topping
+                :Meat-Topping
+                :Seafood-Topping
+                :Vegetable-Topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Green-Pepper-Topping
+                :Jalapeno-Pepper-Topping
+                :Red-Pepper-opping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Ham-Topping
+                :Pepperoni-Topping
+                :Salami-Topping
+                :Spicy-Beef-Topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Pizza
+                :Pizza-Base
+                :Pizza-Topping
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.24.2023-01-14T21:28:32Z) https://github.com/owlcs/owlapi
