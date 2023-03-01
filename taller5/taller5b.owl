@@ -13,33 +13,170 @@
 #    Object Properties
 #################################################################
 
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#hasAncestor
+:hasAncestor rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasRelation ;
+             owl:inverseOf :isAncestorOf ;
+             rdf:type owl:TransitiveProperty .
+
+
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#hasFather
 :hasFather rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasParent ;
-           owl:inverseOf :isFatherOf .
+           owl:inverseOf :isFatherOf ;
+           rdfs:domain :Person ;
+           rdfs:range :Man .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#hasGrandfather
+:hasGrandfather rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasGrandparent ;
+                owl:inverseOf :isGrandfatherOf ;
+                rdfs:range :Man ;
+                owl:propertyChainAxiom ( :hasParent
+                                         :hasFather
+                                       ) .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#hasGrandmother
+:hasGrandmother rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasGrandparent ;
+                owl:inverseOf :isGrandmotherOf ;
+                rdfs:range :Woman ;
+                owl:propertyChainAxiom ( :hasParent
+                                         :hasMother
+                                       ) .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#hasGrandparent
+:hasGrandparent rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasAncestor ;
+                owl:inverseOf :isGrandparentOf ;
+                owl:propertyChainAxiom ( :hasParent
+                                         :hasParent
+                                       ) .
 
 
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#hasMother
 :hasMother rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasParent ;
-           owl:inverseOf :isMotherOf .
+           owl:inverseOf :isMotherOf ;
+           rdfs:domain :Person ;
+           rdfs:range :Woman .
 
 
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#hasParent
 :hasParent rdf:type owl:ObjectProperty ;
-           owl:inverseOf :isParent .
+           rdfs:subPropertyOf :hasAncestor ;
+           owl:inverseOf :isParentOf ;
+           rdfs:domain :Person ;
+           rdfs:range :Person .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#hasRelation
+:hasRelation rdf:type owl:ObjectProperty ,
+                      owl:SymmetricProperty ;
+             rdfs:range :Person .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#hasSex
+:hasSex rdf:type owl:ObjectProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :Person ;
+        rdfs:range :Sex .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#isAncestorOf
+:isAncestorOf rdf:type owl:ObjectProperty .
 
 
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#isFatherOf
 :isFatherOf rdf:type owl:ObjectProperty .
 
 
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#isGrandfatherOf
+:isGrandfatherOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#isGrandmotherOf
+:isGrandmotherOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#isGrandparentOf
+:isGrandparentOf rdf:type owl:ObjectProperty .
+
+
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#isMotherOf
 :isMotherOf rdf:type owl:ObjectProperty .
 
 
-###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#isParent
-:isParent rdf:type owl:ObjectProperty .
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#isParentOf
+:isParentOf rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#Femaleness
+:Femaleness rdf:type owl:Class ;
+            rdfs:subClassOf :Sex ;
+            owl:disjointWith :Maleness .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#Maleness
+:Maleness rdf:type owl:Class ;
+          rdfs:subClassOf :Sex .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#Man
+:Man rdf:type owl:Class ;
+     owl:equivalentClass [ owl:intersectionOf ( :Person
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasSex ;
+                                                  owl:someValuesFrom :Maleness
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasFather ;
+                          owl:someValuesFrom :Man
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasMother ;
+                          owl:someValuesFrom :Woman
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasSex ;
+                          owl:someValuesFrom :Sex
+                        ] ;
+        owl:disjointWith :Sex .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#Sex
+:Sex rdf:type owl:Class ;
+     owl:equivalentClass [ rdf:type owl:Class ;
+                           owl:unionOf ( :Femaleness
+                                         :Maleness
+                                       )
+                         ] .
+
+
+###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#Woman
+:Woman rdf:type owl:Class ;
+       owl:equivalentClass [ owl:intersectionOf ( :Person
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasSex ;
+                                                    owl:someValuesFrom :Femaleness
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] .
 
 
 #################################################################
@@ -58,6 +195,12 @@
 
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#Charlotte_Caroline_Jane_Bright_1894
 :Charlotte_Caroline_Jane_Bright_1894 rdf:type owl:NamedIndividual .
+
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual :Charlotte_Caroline_Jane_Bright_1894 ;
+   owl:assertionProperty :hasFather ;
+   owl:targetIndividual :Henry_Edmund_Bright_1862
+ ] .
 
 
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#Charlotte_Hewett_1863
@@ -223,7 +366,9 @@
 
 
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#Robert_David_Bright_1965
-:Robert_David_Bright_1965 rdf:type owl:NamedIndividual .
+:Robert_David_Bright_1965 rdf:type owl:NamedIndividual ;
+                          :hasFather :David_Bright_1934 ;
+                          :hasMother :Margaret_Grace_Rever_1934 .
 
 
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#Violet_Heath_1887
@@ -231,19 +376,76 @@
 
 
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#Violet_Sylvia_Steward_1894
-:Violet_Sylvia_Steward_1894 rdf:type owl:NamedIndividual .
+:Violet_Sylvia_Steward_1894 rdf:type owl:NamedIndividual ;
+                            :hasFather :John_Tacey_Steward_1873 ;
+                            :hasMother :Lois_Green_1871 .
 
 
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#William_Bright_1970
-:William_Bright_1970 rdf:type owl:NamedIndividual .
+:William_Bright_1970 rdf:type owl:NamedIndividual ;
+                     :hasFather :John_Bright_1930 ;
+                     :hasMother :Joyce_Gosport .
 
 
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#William_George_Bright_1901
-:William_George_Bright_1901 rdf:type owl:NamedIndividual .
+:William_George_Bright_1901 rdf:type owl:NamedIndividual ;
+                            :hasFather :Henry_Edmund_Bright_1862 ;
+                            :hasMother :Charlotte_Hewett_1863 .
 
 
 ###  http://www.sintelweb.com/ingenieriaOntologica/familia1.owl#William_Rever_1870
 :William_Rever_1870 rdf:type owl:NamedIndividual .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Alec_John_Archer_1927
+                        :Charles_Herbert_Rever_1895
+                        :Charlotte_Caroline_Jane_Bright_1894
+                        :Charlotte_Hewett_1863
+                        :Clare_Bright_1966
+                        :David_Bright_1934
+                        :Dereck_Heath
+                        :Diana_Pool
+                        :Eileen_Mary_Rever_1929
+                        :Elizabeth_Frances_Jessop_1869
+                        :Ethel_Archer_1912
+                        :Frederick_Herbert_Bright_1889
+                        :Henry_Edmund_Bright_1862
+                        :Henry_Edmund_Bright_1887
+                        :Ian_Bright_1959
+                        :Iris_Ellen_Archer_1906
+                        :James_Alexander_Archer_1882
+                        :James_Bright_1964
+                        :James_Frank_Hayden_Bright_1891
+                        :Janet_Bright_1964
+                        :John_Bright_1930
+                        :John_Tacey_Steward_1873
+                        :Joyce_Archer_1921
+                        :Joyce_Gosport
+                        :Julie_Bright_1966
+                        :Kathleen_Minnie_Bright_1904
+                        :Leonard_John_Bright_1890
+                        :Lois_Green_1871
+                        :Margaret_Grace_Rever_1934
+                        :Mark_Anthony_Heath_1960
+                        :Mark_Bright_1956
+                        :Nicholas_Charles_Heath_1964
+                        :Nora_Ada_Bright_1899
+                        :Norman_James_Archer_1909
+                        :Peter_William_Bright_1941
+                        :Richard_John_Bright_1962
+                        :Robert_David_Bright_1965
+                        :Violet_Heath_1887
+                        :Violet_Sylvia_Steward_1894
+                        :William_Bright_1970
+                        :William_George_Bright_1901
+                        :William_Rever_1870
+                      )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
