@@ -1,0 +1,99 @@
+# EJERCICIO 1
+
+PREFIX ap: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?ciudad
+WHERE {
+ ?farola a        ap:PuntoDeAlumbrado;
+         dbo:city ?ciudad
+}
+
+# EJERCICIO 2
+
+PREFIX ap: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?prop
+WHERE {
+ ?farola a     ap:PuntoDeAlumbrado;
+         ?prop ?value
+}
+
+# EJERCICIO 3
+
+PREFIX ap: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX skosaltura: <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/altura/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT *
+WHERE {
+ ?farola
+     a         ap:PuntoDeAlumbrado;
+     geo:lat   ?latitud;
+     geo:long  ?longitud;
+     ap:altura skosaltura:Alta
+}
+
+# EJERCICIO 4
+
+PREFIX ap: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+SELECT DISTINCT *
+WHERE {
+ ?farola
+     a           ap:PuntoDeAlumbrado;
+     ap:id       ?id;
+     ap:potencia ?potencia .
+     FILTER (?potencia > 100)
+}
+
+# EJERCICIO 5
+
+SELECT DISTINCT *
+WHERE {
+ ?person
+            dbo:award ?prize ;
+            dbo:birthName ?name .
+ ?prize     dct:subject dbc:Nobel_Prize ;
+            dbp:name  ?prizeName
+}
+ORDER BY ASC (?name)
+LIMIT 100
+
+# EJERCICIO 6
+
+SELECT DISTINCT ?name
+WHERE {
+ ?software
+            a dbo:Software ;
+           dbp:name ?name ;
+           dbp:programmingLanguage <http://dbpedia.org/resource/Java_(programming_language)>; 
+          dbp:operatingSystem dbr:Linux
+}
+
+SELECT DISTINCT ?name
+WHERE {
+ ?software
+            a dbo:Software ;
+           dbp:name ?name ;
+           dbp:programmingLanguage <http://dbpedia.org/resource/Java_(programming_language)>; 
+          dbp:operatingSystem dbr:OS_X
+}
+
+# EJERCICIO 7
+
+SELECT DISTINCT ?name, ?genre
+WHERE {
+ ?game 
+              a dbo:VideoGame ;
+              dbo:publisher dbr:Ubisoft ;
+              dbp:platforms dbr:Microsoft_Windows ;
+              foaf:name ?name ;
+              dbo:genre ?genre
+}
+
+# EJERCICIO 8
+# EJERCICIO 9
+# EJERCICIO 10
+# EJERCICIO 11
