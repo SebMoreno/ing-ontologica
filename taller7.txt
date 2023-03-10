@@ -94,6 +94,41 @@ WHERE {
 }
 
 # EJERCICIO 8
+
+SELECT *
+WHERE
+{
+  ?band
+        a dbo:Band ;
+        dbp:genre dbr:Alternative_rock ;
+        dbp:origin dbr:United_States ;
+        foaf:name ?name .
+}
+
 # EJERCICIO 9
+
+SELECT ?raza ?razaLabel
+WHERE
+{
+  ?raza wdt:P31 wd:Q39367.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+
 # EJERCICIO 10
+
+SELECT ?player ?playerLabel ?playerDescription
+WHERE
+{
+  ?player wdt:P106 wd:Q937857 ;
+          wdt:P19 wd:Q48278 .
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+
 # EJERCICIO 11
+
+SELECT ?moon ?moonLabel
+WHERE
+{
+  ?moon wdt:P31 wd:Q1972 .
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
