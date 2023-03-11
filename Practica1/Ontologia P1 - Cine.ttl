@@ -1,0 +1,1884 @@
+@prefix : <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/> .
+
+<http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://dbpedia.org/ontology/afdbId
+<http://dbpedia.org/ontology/afdbId> rdf:type owl:AnnotationProperty ;
+                                     rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/allcinemaId
+<http://dbpedia.org/ontology/allcinemaId> rdf:type owl:AnnotationProperty ;
+                                          rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/amgid
+<http://dbpedia.org/ontology/amgid> rdf:type owl:AnnotationProperty ;
+                                    rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/bgafdId
+<http://dbpedia.org/ontology/bgafdId> rdf:type owl:AnnotationProperty ;
+                                      rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/cinematography
+<http://dbpedia.org/ontology/cinematography> rdf:type owl:AnnotationProperty ;
+                                             rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/costumeDesigner
+<http://dbpedia.org/ontology/costumeDesigner> rdf:type owl:AnnotationProperty ;
+                                              rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/director
+<http://dbpedia.org/ontology/director> rdf:type owl:AnnotationProperty ;
+                                       rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/eTeatrId
+<http://dbpedia.org/ontology/eTeatrId> rdf:type owl:AnnotationProperty ;
+                                       rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/editing
+<http://dbpedia.org/ontology/editing> rdf:type owl:AnnotationProperty ;
+                                      rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/egafdId
+<http://dbpedia.org/ontology/egafdId> rdf:type owl:AnnotationProperty ;
+                                      rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/eurobabeIndexId
+<http://dbpedia.org/ontology/eurobabeIndexId> rdf:type owl:AnnotationProperty ;
+                                              rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/filmAudioType
+<http://dbpedia.org/ontology/filmAudioType> rdf:type owl:AnnotationProperty ;
+                                            rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/filmColourType
+<http://dbpedia.org/ontology/filmColourType> rdf:type owl:AnnotationProperty ;
+                                             rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/filmRuntime
+<http://dbpedia.org/ontology/filmRuntime> rdf:type owl:AnnotationProperty ;
+                                          rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/firstBroadcast
+<http://dbpedia.org/ontology/firstBroadcast> rdf:type owl:AnnotationProperty ;
+                                             rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/gross
+<http://dbpedia.org/ontology/gross> rdf:type owl:AnnotationProperty ;
+                                    rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/iafdId
+<http://dbpedia.org/ontology/iafdId> rdf:type owl:AnnotationProperty ;
+                                     rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/idAllocine
+<http://dbpedia.org/ontology/idAllocine> rdf:type owl:AnnotationProperty ;
+                                         rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/makeupArtist
+<http://dbpedia.org/ontology/makeupArtist> rdf:type owl:AnnotationProperty ;
+                                           rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/producedBy
+<http://dbpedia.org/ontology/producedBy> rdf:type owl:AnnotationProperty ;
+                                         rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/quebecerTitle
+<http://dbpedia.org/ontology/quebecerTitle> rdf:type owl:AnnotationProperty ;
+                                            rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/setDesigner
+<http://dbpedia.org/ontology/setDesigner> rdf:type owl:AnnotationProperty ;
+                                          rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/specialEffects
+<http://dbpedia.org/ontology/specialEffects> rdf:type owl:AnnotationProperty ;
+                                             rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/titleLanguage
+<http://dbpedia.org/ontology/titleLanguage> rdf:type owl:AnnotationProperty ;
+                                            rdfs:domain <http://dbpedia.org/ontology/Film> .
+
+
+###  http://open.vocab.org/terms/defines
+<http://open.vocab.org/terms/defines> rdf:type owl:AnnotationProperty .
+
+
+###  http://open.vocab.org/terms/describes
+<http://open.vocab.org/terms/describes> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2007/05/powder-s#describedby
+<http://www.w3.org/2007/05/powder-s#describedby> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dbpedia.org/ontology/closingFilm
+<http://dbpedia.org/ontology/closingFilm> rdf:type owl:ObjectProperty ;
+                                          rdfs:range <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/film
+<http://dbpedia.org/ontology/film> rdf:type owl:ObjectProperty ;
+                                   rdfs:range <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/filmVersion
+<http://dbpedia.org/ontology/filmVersion> rdf:type owl:ObjectProperty ;
+                                          rdfs:range <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/movie
+<http://dbpedia.org/ontology/movie> rdf:type owl:ObjectProperty ;
+                                    rdfs:range <http://dbpedia.org/ontology/Film> .
+
+
+###  http://dbpedia.org/ontology/openingFilm
+<http://dbpedia.org/ontology/openingFilm> rdf:type owl:ObjectProperty ;
+                                          rdfs:range <http://dbpedia.org/ontology/Film> .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/asociada_a
+:asociada_a rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Boleta ;
+            rdfs:range :Asiento ;
+            rdfs:comment "Propiedad que indica el asiento que tiene asociado una boleta" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/compra
+:compra rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        owl:inverseOf :comprado_por ;
+        rdfs:domain :Cliente ;
+        rdfs:range :Boleta ,
+                   :Combos ;
+        rdfs:comment "Propiedad que indica la compra de un cliente, ya sea la compra de una boleta o de un combo" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/comprado_por
+:comprado_por rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:comment "Propiedad que indica el cliente que adquirió una boleta o combo" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/es_adyacente_a
+:es_adyacente_a rdf:type owl:ObjectProperty ,
+                         owl:SymmetricProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :Asiento
+                                            :Baño
+                                            :Cafeteria
+                                            :Cine
+                                            :Estacionamiento
+                                            :Sala
+                                          )
+                            ] ;
+                rdfs:range [ rdf:type owl:Class ;
+                             owl:unionOf ( :Asiento
+                                           :Baño
+                                           :Cafeteria
+                                           :Cine
+                                           :Estacionamiento
+                                           :Sala
+                                         )
+                           ] ;
+                rdfs:comment "Propiedad que indica la ubicación de los servicios, en este caso, qué servicios son adyacentes en ubicación a los demás" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/esta_dentro_de
+:esta_dentro_de rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
+                rdfs:domain :Servicio ;
+                rdfs:range :Servicio ;
+                rdfs:comment "Propiedad que indica si un servicio se encuentra dentro de otro servicio, como por ejemplo, las salas se encuentran dentro del cine" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/esta_incluido_en
+:esta_incluido_en rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :incluye ;
+                  rdfs:comment "Propiedad que indica si una pantalla, asiento o sonido están incluidos en una boleta" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/estaciona_en
+:estaciona_en rdf:type owl:ObjectProperty ;
+              rdfs:domain :Persona ;
+              rdfs:range :Estacionamiento ;
+              rdfs:comment "Propiedad que indica si un usuario estaciona en el estacionamiento o no" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/incluye
+:incluye rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :Boleta ;
+         rdfs:range [ rdf:type owl:Class ;
+                      owl:unionOf ( :Asiento
+                                    :Audio
+                                    :Pantalla
+                                  )
+                    ] ;
+         rdfs:comment "Propiedad que indica qué tipo de asiento, audio o pantalla incluye una boleta" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/proyectada_en
+:proyectada_en rdf:type owl:ObjectProperty ;
+               rdfs:domain :Pelicula ;
+               rdfs:range :Sala ;
+               rdfs:comment "Propiedad que indica en qué sala está siendo proyectada una película" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/publicita
+:publicita rdf:type owl:ObjectProperty ;
+           owl:inverseOf :publicitado_por ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Utileria ;
+           rdfs:range :Pelicula ;
+           rdfs:comment "Propiedad que indica cuál película está siendo publicitada por un elemento de utileria" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/publicitado_por
+:publicitado_por rdf:type owl:ObjectProperty ,
+                          owl:InverseFunctionalProperty ;
+                 rdfs:domain :Pelicula ;
+                 rdfs:range :Utileria ;
+                 rdfs:comment "Propiedad que indica si una película está siendo publicitada por un elemento de utileria" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/trabaja_en
+:trabaja_en rdf:type owl:ObjectProperty ;
+            rdfs:domain :Empleado ;
+            rdfs:range :Servicio ;
+            rdfs:comment "Propiedad que indica en qué servicio trabaja un empleado" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/trae
+:trae rdf:type owl:ObjectProperty ;
+      rdfs:domain :Combos ;
+      rdfs:range :Cafeteria ;
+      rdfs:comment "Propiedad que indica los elementos que incluye un combo" .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/ubicado_en
+:ubicado_en rdf:type owl:ObjectProperty ;
+            rdfs:domain :Cliente ;
+            rdfs:range :Asiento ;
+            owl:propertyChainAxiom ( :compra
+                                     :asociada_a
+                                     :esta_dentro_de
+                                   ) ,
+                                   ( :estaciona_en
+                                     :es_adyacente_a
+                                     :esta_dentro_de
+                                   ) ;
+            rdfs:comment "Propiedad que indica en qué asiento estará ubicado un cliente" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/numero_de_asientos
+:numero_de_asientos rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Boleta ;
+                    rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/Film
+<http://dbpedia.org/ontology/Film> rdf:type owl:Class ;
+                                   owl:equivalentClass <http://schema.org/Movie> ,
+                                                       :Pelicula ,
+                                                       <http://www.wikidata.org/entity/Q11424> ;
+                                   rdfs:subClassOf <http://dbpedia.org/ontology/Work> .
+
+
+###  http://dbpedia.org/ontology/Work
+<http://dbpedia.org/ontology/Work> rdf:type owl:Class ;
+                                   rdfs:label "dbo:Work"@en .
+
+
+###  http://schema.org/Movie
+<http://schema.org/Movie> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#2D
+<http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#2D> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf :Pantalla ;
+                                                                                    rdfs:comment "Proyección básica de una película sin ningún efecto especial" ;
+                                                                                    rdfs:label "2D"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#3D
+<http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#3D> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf :Pantalla ;
+                                                                                    rdfs:comment "Proyección de una película en 3D que requiere un formato especial en la película, y el uso de lentes 3D por parte de los espectadores" ;
+                                                                                    rdfs:label "3D"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#4D
+<http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#4D> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf :Pantalla ;
+                                                                                    rdfs:comment "Cumple el mismo objetivo que las pantallas 3D, pero incluyendo efectos especiales en la sala y en los asientos que causan una experiencia más emocionante" ;
+                                                                                    rdfs:label "4D"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Afiches_promocionales
+:Afiches_promocionales rdf:type owl:Class ;
+                       rdfs:subClassOf :Utileria ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :publicita ;
+                                         owl:allValuesFrom :Pelicula
+                                       ] ;
+                       rdfs:comment "Cartel que se fija en las instalaciones del cine o en sus afueras, con el fin de publicitar películas anunciadas o próximas a estrenarse" ;
+                       rdfs:label "Afiches promocionales"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Asiento
+:Asiento rdf:type owl:Class ;
+         rdfs:subClassOf :Cine ;
+         rdfs:comment "Mueble asignado para una persona dentro de una sala de cine que puede poseer diferentes características según su precio" ;
+         rdfs:label "Asiento"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Asiento_4D
+:Asiento_4D rdf:type owl:Class ;
+            rdfs:subClassOf :Asiento ;
+            rdfs:comment "Asiento capaz de moverse e inclinarse según los eventos de la película" ;
+            rdfs:label "Asiento 4D"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Asiento_basico
+:Asiento_basico rdf:type owl:Class ;
+                rdfs:subClassOf :Asiento ;
+                rdfs:comment "Asiento estándar de un cine" ;
+                rdfs:label "Asiento basico"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Asiento_con_vibracion
+:Asiento_con_vibracion rdf:type owl:Class ;
+                       rdfs:subClassOf :Asiento ;
+                       rdfs:comment "Asiento con la capacidad de vibrar dinámicamente según los sonidos y eventos de la película" ;
+                       rdfs:label "Asiento con vibracion"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Asiento_preferencial
+:Asiento_preferencial rdf:type owl:Class ;
+                      rdfs:subClassOf :Asiento ;
+                      rdfs:comment "Asiento con ubicación privilegiada dentro de la sala, que aumenta su costo" ;
+                      rdfs:label "Asiento preferencial"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Audio
+:Audio rdf:type owl:Class ;
+       rdfs:subClassOf :Cine ;
+       rdfs:comment "Equipo de sonido integrado a cada sala de cine" ;
+       rdfs:label "Audio"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Baño
+:Baño rdf:type owl:Class ;
+      rdfs:subClassOf :Limpieza ;
+      rdfs:comment "Espacio destinado para aseo personal y satisfacción de necesidades naturales" ;
+      rdfs:label "Baño"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta
+:Boleta rdf:type owl:Class ;
+        owl:equivalentClass :Boleta_digital ;
+        rdfs:comment "Factura que acredita el pago de una tarifa con el fin de acceder al servicio de Cine con diferentes servicios" ;
+        rdfs:label "Boleta"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_3D
+:Boleta_3D rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :Boleta_valida
+                                                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty :incluye ;
+                                                                               owl:someValuesFrom <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#3D>
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty :incluye ;
+                                                                               owl:someValuesFrom :Asiento_basico
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty :incluye ;
+                                                                               owl:someValuesFrom :Surround_7.1
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :Boleta_valida .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_4D
+:Boleta_4D rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :Boleta_valida
+                                                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty :incluye ;
+                                                                               owl:someValuesFrom <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#4D>
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty :incluye ;
+                                                                               owl:someValuesFrom :Asiento_4D
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty :incluye ;
+                                                                               owl:someValuesFrom :Surround_7.1
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :Boleta_valida .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_digital
+:Boleta_digital rdf:type owl:Class ;
+                rdfs:comment "Boleta en formato digital" ;
+                rdfs:label "Boleta digital"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_estandar
+:Boleta_estandar rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( :Boleta_valida
+                                                            [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty :incluye ;
+                                                                                     owl:someValuesFrom <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#2D>
+                                                                                   ]
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty :incluye ;
+                                                                                     owl:someValuesFrom :Asiento_basico
+                                                                                   ]
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty :incluye ;
+                                                                                     owl:someValuesFrom :Estereo
+                                                                                   ]
+                                                                                 ) ;
+                                                              rdf:type owl:Class
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf :Boleta_valida .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_estandar_surround
+:Boleta_estandar_surround rdf:type owl:Class ;
+                          owl:equivalentClass [ owl:intersectionOf ( :Boleta_valida
+                                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty :incluye ;
+                                                                                              owl:someValuesFrom <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#2D>
+                                                                                            ]
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty :incluye ;
+                                                                                              owl:someValuesFrom :Asiento_basico
+                                                                                            ]
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty :incluye ;
+                                                                                              owl:someValuesFrom :Surround_7.1
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ] ;
+                          rdfs:subClassOf :Boleta_valida .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_invalida
+:Boleta_invalida rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( :Boleta
+                                                            [ rdf:type owl:Class ;
+                                                              owl:complementOf :Boleta_valida
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf :Boleta ;
+                 rdfs:comment "Boleta que no cumple los formatos establecidos por el Cine" ;
+                 rdfs:label "Boleta invalida"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_preferencial
+:Boleta_preferencial rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( :Boleta_valida
+                                                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :incluye ;
+                                                                                         owl:someValuesFrom <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#2D>
+                                                                                       ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :incluye ;
+                                                                                         owl:someValuesFrom :Asiento_preferencial
+                                                                                       ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :incluye ;
+                                                                                         owl:someValuesFrom :Surround_7.1
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf :Boleta_valida .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_valida
+:Boleta_valida rdf:type owl:Class ;
+               rdfs:subClassOf :Boleta ;
+               rdfs:comment "Boleta que cumple los formatos establecidos por el cine" ;
+               rdfs:label "Boleta valida"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_vibrosound
+:Boleta_vibrosound rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( :Boleta_valida
+                                                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty :incluye ;
+                                                                                       owl:someValuesFrom <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#2D>
+                                                                                     ]
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty :incluye ;
+                                                                                       owl:someValuesFrom :Asiento_con_vibracion
+                                                                                     ]
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty :incluye ;
+                                                                                       owl:someValuesFrom :Surround_7.1
+                                                                                     ]
+                                                                                   ) ;
+                                                                rdf:type owl:Class
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf :Boleta_valida .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_vibrosound_3D
+:Boleta_vibrosound_3D rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( :Boleta_valida
+                                                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty :incluye ;
+                                                                                          owl:someValuesFrom <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#3D>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty :incluye ;
+                                                                                          owl:someValuesFrom :Asiento_con_vibracion
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty :incluye ;
+                                                                                          owl:someValuesFrom :Surround_7.1
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf :Boleta_valida .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Cafeteria
+:Cafeteria rdf:type owl:Class ;
+           rdfs:subClassOf :Servicio .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Cartelera
+:Cartelera rdf:type owl:Class ;
+           rdfs:subClassOf :Cine .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Cine
+:Cine rdf:type owl:Class ;
+      rdfs:subClassOf :Servicio .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Cliente
+:Cliente rdf:type owl:Class ;
+         rdfs:subClassOf :Persona ;
+         rdfs:comment "Persona que asiste a un establecimiento para recibir un servicio a cambio de dinero" ;
+         rdfs:label "Cliente"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Cliente_casual
+:Cliente_casual rdf:type owl:Class ;
+                rdfs:subClassOf [ owl:intersectionOf ( :Cliente
+                                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :compra ;
+                                                                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                owl:onClass :Boleta
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :compra ;
+                                                                                owl:maxQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                                owl:onClass :Boleta
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                owl:disjointWith :Cliente_frecuente ;
+                rdfs:comment "Cliente que adquiere una o dos boletas en el cine" ;
+                rdfs:label "Cliente casual"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Cliente_frecuente
+:Cliente_frecuente rdf:type owl:Class ;
+                   rdfs:subClassOf [ owl:intersectionOf ( :Cliente
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :compra ;
+                                                            owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass :Boleta
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :compra ;
+                                                            owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass :Boleta
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+                   rdfs:comment "Cliente que adquiere mínimo 3 boletas en el cine a la vez hasta un máximo de 10 boletas" ;
+                   rdfs:label "Cliente frecuente"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combo_1
+:Combo_1 rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :Combos
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Gaseosa_pequeña
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Palomitas_pequeñas
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combo_2
+:Combo_2 rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :Combos
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Gaseosa_mediana
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Palomitas_medianas
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combo_3
+:Combo_3 rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :Combos
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Palomitas_grandes
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Gaseosa_grande
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combo_4
+:Combo_4 rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :Combos
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Palomitas_medianas
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Gaseosa_grande
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Hot_Dog_pequeño
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combo_5
+:Combo_5 rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :Combos
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Nachos
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Gaseosa_grande
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Hamburguesa_especial
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combo_6
+:Combo_6 rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :Combos
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Gaseosa_grande
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Hamburguesa_especial
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :trae ;
+                                                      owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :Hot_Dog_grande
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:comment "Combo compuesto por 2 Hot Dog grandes, 2 hamburguesas especiales y 2 gaseosas grandes" ;
+         rdfs:label "Combo 6"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combos
+:Combos rdf:type owl:Class ;
+        rdfs:subClassOf :Cafeteria ;
+        rdfs:comment "Paquete que ofrece distintos alimentos en conjunto por un precio más accesible" ;
+        rdfs:label "Combos"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Empleado
+:Empleado rdf:type owl:Class ;
+          rdfs:subClassOf :Persona ;
+          rdfs:comment "Persona que trabaja en uno de los establecimientos del cine" ;
+          rdfs:label "Empleado"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Empleado_cafeteria
+:Empleado_cafeteria rdf:type owl:Class ;
+                    rdfs:subClassOf :Empleado ;
+                    rdfs:comment "Empleado que trabaja en la cafeteria" ;
+                    rdfs:label "Empleado cafeteria"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Empleado_cine
+:Empleado_cine rdf:type owl:Class ;
+               rdfs:subClassOf :Empleado ;
+               rdfs:comment "Empleado que trabaja en el cine" ;
+               rdfs:label "Empleado cine"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Empleado_estacionamiento
+:Empleado_estacionamiento rdf:type owl:Class ;
+                          rdfs:subClassOf :Empleado ;
+                          rdfs:comment "Empleado que trabaja en el estacionamiento" ;
+                          rdfs:label "Empleado estacionamiento"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Empleado_limpieza
+:Empleado_limpieza rdf:type owl:Class ;
+                   rdfs:subClassOf :Empleado ;
+                   rdfs:comment "Empleado que trabaja en el área de limpieza" ;
+                   rdfs:label "Empleado limpieza"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Estacionamiento
+:Estacionamiento rdf:type owl:Class ;
+                 rdfs:subClassOf :Servicio .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Estereo
+:Estereo rdf:type owl:Class ;
+         rdfs:subClassOf :Audio ;
+         owl:disjointWith :Surround_7.1 ;
+         rdfs:comment "Equipo de sonido básico que consiste en 2 canales ubicados a los laterales de la sala" ;
+         rdfs:label "Estereo"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Fuera_de_cartelera
+:Fuera_de_cartelera rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :Cine
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:complementOf :Cartelera
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:comment "Lista de peliculas que ya han sido retiradas de cartelera y no están siendo proyectadas" ;
+                    rdfs:label "Fuera de cartelera"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Gaseosa
+:Gaseosa rdf:type owl:Class ;
+         rdfs:subClassOf :Cafeteria ;
+         rdfs:comment "Bebida gasificada de distintos sabores" ;
+         rdfs:label "Gaseosa"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Gaseosa_grande
+:Gaseosa_grande rdf:type owl:Class ;
+                rdfs:subClassOf :Gaseosa ;
+                rdfs:comment "Vaso de gaseosa grande y, por ende, más costoso" ;
+                rdfs:label "Gaseosa grande"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Gaseosa_mediana
+:Gaseosa_mediana rdf:type owl:Class ;
+                 rdfs:subClassOf :Gaseosa ;
+                 rdfs:comment "Vaso de gaseosa mediano" ;
+                 rdfs:label "Gaseosa mediana"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Gaseosa_pequeña
+:Gaseosa_pequeña rdf:type owl:Class ;
+                 rdfs:subClassOf :Gaseosa ;
+                 rdfs:comment "Vaso de gaseosa pequeño y, por ende, más económico" ;
+                 rdfs:label "Gaseosa pequeña"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Hamburguesa
+:Hamburguesa rdf:type owl:Class ;
+             rdfs:subClassOf :Cafeteria ;
+             rdfs:comment "Alimento que consiste principalmente de una carne asada con diversas verduras y queso, entre 2 rebanadas de pan" ;
+             rdfs:label "Hamburguesa"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Hamburguesa_especial
+:Hamburguesa_especial rdf:type owl:Class ;
+                      rdfs:subClassOf :Hamburguesa ;
+                      owl:disjointWith :Hamburguesa_sencilla ;
+                      rdfs:comment "Hamburguesa que incluye 2 carnes, tocineta, queso, cebolla, tomate y lechuga, entre 2 rebanadas de pan" ;
+                      rdfs:label "Hamburguesa especial"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Hamburguesa_sencilla
+:Hamburguesa_sencilla rdf:type owl:Class ;
+                      rdfs:subClassOf :Hamburguesa ;
+                      rdfs:comment "Hamburguesa básica que incluye una carne, lechuga, tomate, cebolla y queso, entre dos rebanadas de pan" ;
+                      rdfs:label "Hamburguesa sencilla"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Hot_Dog
+:Hot_Dog rdf:type owl:Class ;
+         rdfs:subClassOf :Cafeteria ;
+         rdfs:comment "Alimento que consiste principalmente en una salchicha asada o frita con diversas verduras, queso y ripio de papa entre un pan especial que tiene una apertura en medio" ;
+         rdfs:label "Hot Dog"@en .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Hot_Dog_grande
+:Hot_Dog_grande rdf:type owl:Class ;
+                rdfs:subClassOf :Hot_Dog ;
+                owl:disjointWith :Hot_Dog_pequeño ;
+                rdfs:comment "Hot Dog grande al que le puedes añadir los vegetales que quieras" ;
+                rdfs:label "Hot Dog grande"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Hot_Dog_pequeño
+:Hot_Dog_pequeño rdf:type owl:Class ;
+                 rdfs:subClassOf :Hot_Dog ;
+                 rdfs:comment "Hot Dog pequeño al que le puedes añadir los vegetales que quieras" ;
+                 rdfs:label "Hot Dog pequeño"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Limpieza
+:Limpieza rdf:type owl:Class ;
+          rdfs:subClassOf :Servicio ;
+          rdfs:comment "Servicio proveido para higiene de los clientes que acceden al cine" ;
+          rdfs:label "Limpieza"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Nachos
+:Nachos rdf:type owl:Class ;
+        rdfs:subClassOf :Cafeteria ;
+        rdfs:comment "Porción de tortilla frita que viene acompañada de guacamole o salsa de queso chedar" ;
+        rdfs:label "Nachos"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Palomitas
+:Palomitas rdf:type owl:Class ;
+           rdfs:subClassOf :Cafeteria ;
+           rdfs:comment "Maiz frito sazonado con mantequilla y sal o dulce al ser freido con azucar" ;
+           rdfs:label "Palomitas"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Palomitas_grandes
+:Palomitas_grandes rdf:type owl:Class ;
+                   rdfs:subClassOf :Palomitas ;
+                   rdfs:comment "Tamaño grande de palomitas" ;
+                   rdfs:label "Palomitas grandes"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Palomitas_medianas
+:Palomitas_medianas rdf:type owl:Class ;
+                    rdfs:subClassOf :Palomitas ;
+                    rdfs:comment "Tamaño mediano de palomitas" ;
+                    rdfs:label "Palomitas medianas"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Palomitas_pequeñas
+:Palomitas_pequeñas rdf:type owl:Class ;
+                    rdfs:subClassOf :Palomitas ;
+                    rdfs:comment "Tamaño pequeño de palomitas" ;
+                    rdfs:label "Palomitas pequeñas"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Pantalla
+:Pantalla rdf:type owl:Class ;
+          rdfs:subClassOf :Cine ;
+          rdfs:comment "Superficie de la sala donde las películas son proyectadas" ;
+          rdfs:label "Pantalla"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Pelicula
+:Pelicula rdf:type owl:Class ;
+          rdfs:subClassOf :Cine ;
+          rdfs:comment "Largometraje multimedial considerado el séptimo arte de la humanidad" ;
+          rdfs:label "Pelicula"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Persona
+:Persona rdf:type owl:Class ;
+         rdfs:comment "Ser viviente perteneciente a la especie humana" ;
+         rdfs:label "Persona"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Poster
+:Poster rdf:type owl:Class ;
+        rdfs:subClassOf :Utileria ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :publicita ;
+                          owl:allValuesFrom :Pelicula
+                        ] ;
+        rdfs:comment "Cartel que se fija en las instalaciones del cine, con el fin de anunciar películas en proyección, o que están a punto de estrenarse" ;
+        rdfs:label "Poster"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Recipientes_promocionales
+:Recipientes_promocionales rdf:type owl:Class ;
+                           rdfs:subClassOf :Utileria ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :publicita ;
+                                             owl:allValuesFrom :Pelicula
+                                           ] ;
+                           rdfs:comment "Recipientes para palomitas o gaseosa con ilustraciones publicitarias de películas que son tendencia en el momento" ;
+                           rdfs:label "Recipientes promocionales"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Sala
+:Sala rdf:type owl:Class ;
+      rdfs:subClassOf :Cine ;
+      rdfs:comment "Espacio adecuado y destinado para la proyección de películas y consumo de alimentos" ;
+      rdfs:label "Sala"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Servicio
+:Servicio rdf:type owl:Class ;
+          rdfs:comment "Serie de beneficios ofrecidos por una institución a cambio de dinero" ;
+          rdfs:label "Servicio"@es .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Surround_7.1
+:Surround_7.1 rdf:type owl:Class ;
+              rdfs:subClassOf :Audio ;
+              rdfs:comment "Equipo de sonido especial dispuesto alrededor de toda la sala para lograr un efecto envolvente" ;
+              rdfs:label "Surround 7.1"@en .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Utileria
+:Utileria rdf:type owl:Class ;
+          rdfs:comment "Materiales destinados a decoración o fines publicitarios dentro de un establecimiento" ;
+          rdfs:label "Utileria"@es .
+
+
+###  http://www.wikidata.org/entity/Q11424
+<http://www.wikidata.org/entity/Q11424> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/ontology/Film
+<http://dbpedia.org/ontology/Film> rdf:type owl:NamedIndividual ,
+                                            <http://dbpedia.org/ontology/Film> .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#Cartelera
+:Cartelera rdf:type owl:NamedIndividual ,
+                    :Cartelera .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_3D
+:Boleta_3D rdf:type owl:NamedIndividual ,
+                    :Boleta_3D ;
+           :incluye :asiento_basico_2 ,
+                    :pantalla_3D ,
+                    :sonido_surround_2 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_4D
+:Boleta_4D rdf:type owl:NamedIndividual ,
+                    :Boleta_4D ;
+           :incluye :asiento_4D ,
+                    :pantalla_4D ,
+                    :sonido_surround_3 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_estandar_surround
+:Boleta_estandar_surround rdf:type owl:NamedIndividual ,
+                                   :Boleta_estandar_surround ;
+                          :incluye :asiento_basico ,
+                                   :pantalla_2D ,
+                                   :sonido_surround_1 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_preferencial
+:Boleta_preferencial rdf:type owl:NamedIndividual ,
+                              :Boleta_preferencial ;
+                     :incluye :asiento_preferencial ,
+                              :pantalla_2D ,
+                              :sonido_surround_1 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_vibrosound
+:Boleta_vibrosound rdf:type owl:NamedIndividual ,
+                            :Boleta_vibrosound ;
+                   :incluye :asiento_con_vibracion ,
+                            :pantalla_2D ,
+                            :sonido_surround_1 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Boleta_vibrosound_3D
+:Boleta_vibrosound_3D rdf:type owl:NamedIndividual ,
+                               :Boleta_vibrosound_3D ;
+                      :incluye :asiento_con_vibracion_2 ,
+                               :pantalla_3D ,
+                               :sonido_surround_2 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Cafeteria
+:Cafeteria rdf:type owl:NamedIndividual ,
+                    :Cafeteria ;
+           :es_adyacente_a :Estacionamiento .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Cine
+:Cine rdf:type owl:NamedIndividual ,
+               :Cine ;
+      :es_adyacente_a :Cafeteria ,
+                      :baño .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combo_1
+:Combo_1 rdf:type owl:NamedIndividual ,
+                  :Combo_1 ;
+         :trae :gaseosa_pequeña ,
+               :palomitas_pequeñas .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combo_2
+:Combo_2 rdf:type owl:NamedIndividual ,
+                  :Combo_2 ;
+         :trae :gaseosa_mediana ,
+               :palomitas_medianas .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combo_3
+:Combo_3 rdf:type owl:NamedIndividual ,
+                  :Combo_3 ;
+         :trae :gaseosa_grande ,
+               :gaseosa_grande_2 ,
+               :palomitas_grandes .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combo_4
+:Combo_4 rdf:type owl:NamedIndividual ,
+                  :Combo_4 ;
+         :trae :gaseosa_grande_3 ,
+               :gaseosa_grande_4 ,
+               :hotdog_pequeño ,
+               :hotdog_pequeño_2 ,
+               :palomitas_medianas_2 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Combo_5
+:Combo_5 rdf:type owl:NamedIndividual ,
+                  :Combo_5 ;
+         :trae :gaseosa_grande_5 ,
+               :gaseosa_grande_6 ,
+               :hamburguesa_especial ,
+               :hamburguesa_especial_2 ,
+               :nachos .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/Estacionamiento
+:Estacionamiento rdf:type owl:NamedIndividual ,
+                          :Estacionamiento .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/asiento_4D
+:asiento_4D rdf:type owl:NamedIndividual ,
+                     :Asiento_4D ;
+            :esta_dentro_de :sala_3 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/asiento_basico
+:asiento_basico rdf:type owl:NamedIndividual ,
+                         :Asiento_basico ;
+                :esta_dentro_de :sala_1 ;
+                :incluye :pantalla_2D .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/asiento_basico_2
+:asiento_basico_2 rdf:type owl:NamedIndividual ,
+                           :Asiento_basico ;
+                  :esta_dentro_de :sala_2 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/asiento_con_vibracion
+:asiento_con_vibracion rdf:type owl:NamedIndividual ,
+                                :Asiento_con_vibracion ;
+                       :esta_dentro_de :sala_1 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/asiento_con_vibracion_2
+:asiento_con_vibracion_2 rdf:type owl:NamedIndividual ,
+                                  :Asiento_con_vibracion ;
+                         :esta_dentro_de :sala_2 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/asiento_preferencial
+:asiento_preferencial rdf:type owl:NamedIndividual ,
+                               :Asiento_preferencial ;
+                      :esta_dentro_de :sala_1 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/baño
+:baño rdf:type owl:NamedIndividual ,
+               :Baño .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/cliente_1
+:cliente_1 rdf:type owl:NamedIndividual ,
+                    :Cliente ;
+           owl:sameAs :empleado_4 ;
+           :compra :Boleta_estandar_surround ,
+                   :Boleta_vibrosound ,
+                   :Combo_1 ;
+           :ubicado_en :asiento_basico ,
+                       :asiento_con_vibracion .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/empleado_4
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/cliente_2
+:cliente_2 rdf:type owl:NamedIndividual ,
+                    :Cliente ;
+           :compra :Boleta_3D ,
+                   :Combo_2 ;
+           :estaciona_en :Estacionamiento ;
+           :ubicado_en :asiento_basico_2 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/cliente_3
+:cliente_3 rdf:type owl:NamedIndividual ,
+                    :Cliente ;
+           :compra :Boleta_4D ,
+                   :Combo_3 ;
+           :estaciona_en :Estacionamiento ;
+           :ubicado_en :asiento_4D .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/cliente_4
+:cliente_4 rdf:type owl:NamedIndividual ,
+                    :Cliente ;
+           :compra :Boleta_vibrosound_3D ,
+                   :Combo_4 ;
+           :ubicado_en :asiento_con_vibracion_2 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/cliente_5
+:cliente_5 rdf:type owl:NamedIndividual ,
+                    :Cliente ;
+           :compra :Boleta_preferencial ,
+                   :Combo_5 ;
+           :estaciona_en :Estacionamiento ;
+           :ubicado_en :asiento_preferencial .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/empleado_1
+:empleado_1 rdf:type owl:NamedIndividual ,
+                     :Empleado_cafeteria ;
+            :estaciona_en :Estacionamiento ;
+            :trabaja_en :Cafeteria .
+
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual :empleado_1 ;
+   owl:assertionProperty :trabaja_en ;
+   owl:targetIndividual :Estacionamiento
+ ] .
+
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual :empleado_1 ;
+   owl:assertionProperty :trabaja_en ;
+   owl:targetIndividual :baño
+ ] .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/empleado_2
+:empleado_2 rdf:type owl:NamedIndividual ,
+                     :Empleado_cine ;
+            :estaciona_en :Estacionamiento ;
+            :trabaja_en :Cine .
+
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual :empleado_2 ;
+   owl:assertionProperty :trabaja_en ;
+   owl:targetIndividual :Cafeteria
+ ] .
+
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual :empleado_2 ;
+   owl:assertionProperty :trabaja_en ;
+   owl:targetIndividual :baño
+ ] .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/empleado_3
+:empleado_3 rdf:type owl:NamedIndividual ,
+                     :Empleado_estacionamiento ;
+            :estaciona_en :Estacionamiento ;
+            :trabaja_en :Estacionamiento .
+
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual :empleado_3 ;
+   owl:assertionProperty :trabaja_en ;
+   owl:targetIndividual :Cine
+ ] .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/empleado_4
+:empleado_4 rdf:type owl:NamedIndividual ,
+                     :Empleado_limpieza ;
+            :trabaja_en :baño .
+
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual :empleado_4 ;
+   owl:assertionProperty :trabaja_en ;
+   owl:targetIndividual :Estacionamiento
+ ] .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/gaseosa_grande
+:gaseosa_grande rdf:type owl:NamedIndividual ,
+                         :Gaseosa_grande .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/gaseosa_grande_2
+:gaseosa_grande_2 rdf:type owl:NamedIndividual ,
+                           :Gaseosa_grande .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/gaseosa_grande_3
+:gaseosa_grande_3 rdf:type owl:NamedIndividual ,
+                           :Gaseosa_grande .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/gaseosa_grande_4
+:gaseosa_grande_4 rdf:type owl:NamedIndividual ,
+                           :Gaseosa_grande .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/gaseosa_grande_5
+:gaseosa_grande_5 rdf:type owl:NamedIndividual ,
+                           :Gaseosa_grande .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/gaseosa_grande_6
+:gaseosa_grande_6 rdf:type owl:NamedIndividual ,
+                           :Gaseosa_grande .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/gaseosa_mediana
+:gaseosa_mediana rdf:type owl:NamedIndividual ,
+                          :Gaseosa_mediana .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/gaseosa_pequeña
+:gaseosa_pequeña rdf:type owl:NamedIndividual ,
+                          :Gaseosa_pequeña .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/hamburguesa_especial
+:hamburguesa_especial rdf:type owl:NamedIndividual ,
+                               :Hamburguesa_especial .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/hamburguesa_especial_2
+:hamburguesa_especial_2 rdf:type owl:NamedIndividual ,
+                                 :Hamburguesa_especial .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/hotdog_pequeño
+:hotdog_pequeño rdf:type owl:NamedIndividual ,
+                         :Hot_Dog_pequeño .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/hotdog_pequeño_2
+:hotdog_pequeño_2 rdf:type owl:NamedIndividual ,
+                           :Hot_Dog_pequeño .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/nachos
+:nachos rdf:type owl:NamedIndividual ,
+                 :Nachos .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/palomitas_grandes
+:palomitas_grandes rdf:type owl:NamedIndividual ,
+                            :Palomitas_grandes .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/palomitas_medianas
+:palomitas_medianas rdf:type owl:NamedIndividual ,
+                             :Palomitas_medianas .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/palomitas_medianas_2
+:palomitas_medianas_2 rdf:type owl:NamedIndividual ,
+                               :Palomitas_medianas .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/palomitas_pequeñas
+:palomitas_pequeñas rdf:type owl:NamedIndividual ,
+                             :Palomitas_pequeñas .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/pantalla_2D
+:pantalla_2D rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#2D> ;
+             :esta_dentro_de :sala_1 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/pantalla_3D
+:pantalla_3D rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#3D> ;
+             :esta_dentro_de :sala_2 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/pantalla_4D
+:pantalla_4D rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#4D> ;
+             :esta_dentro_de :sala_3 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/pelicula_Sonic_2
+:pelicula_Sonic_2 rdf:type owl:NamedIndividual ,
+                           :Pelicula ;
+                  owl:differentFrom :pelicula_harry_potter ,
+                                    :pelicula_la_ballena ;
+                  :proyectada_en :sala_2 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/pelicula_harry_potter
+:pelicula_harry_potter rdf:type owl:NamedIndividual ,
+                                :Pelicula ;
+                       :proyectada_en :sala_3 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/pelicula_la_ballena
+:pelicula_la_ballena rdf:type owl:NamedIndividual ,
+                              :Pelicula ;
+                     :proyectada_en :sala_1 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/poster_1
+:poster_1 rdf:type owl:NamedIndividual ,
+                   :Poster ;
+          :publicita :pelicula_Sonic_2 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/poster_2
+:poster_2 rdf:type owl:NamedIndividual ,
+                   :Poster ;
+          :publicita :pelicula_la_ballena .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/poster_3
+:poster_3 rdf:type owl:NamedIndividual ,
+                   :Poster ;
+          :publicita :pelicula_harry_potter .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/sala_1
+:sala_1 rdf:type owl:NamedIndividual ,
+                 :Sala ;
+        :esta_dentro_de :Cine .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/sala_2
+:sala_2 rdf:type owl:NamedIndividual ,
+                 :Sala ;
+        :esta_dentro_de :Cine .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/sala_3
+:sala_3 rdf:type owl:NamedIndividual ,
+                 :Sala ;
+        :esta_dentro_de :Cine .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/sonido_surround_1
+:sonido_surround_1 rdf:type owl:NamedIndividual ,
+                            :Surround_7.1 ;
+                   :esta_dentro_de :sala_1 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/sonido_surround_2
+:sonido_surround_2 rdf:type owl:NamedIndividual ,
+                            :Surround_7.1 ;
+                   :esta_dentro_de :sala_2 .
+
+
+###  http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16/sonido_surround_3
+:sonido_surround_3 rdf:type owl:NamedIndividual ,
+                            :Surround_7.1 ;
+                   :esta_dentro_de :sala_3 .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://dbpedia.org/ontology/> <http://open.vocab.org/terms/defines> <http://dbpedia.org/ontology/Film> .
+
+
+<http://dbpedia.org/ontology/Film> rdfs:isDefinedBy <http://dbpedia.org/ontology/> ;
+                                   rdfs:label "Film"@de ,
+                                              "film"@da ,
+                                              "film"@fr ,
+                                              "film"@nl ,
+                                              "film"@pl ,
+                                              "movie"@en ,
+                                              "película"@es ,
+                                              "scannán"@ga ,
+                                              "ταινία"@el ,
+                                              "فلم"@ur ,
+                                              "فيلم"@ar ,
+                                              "映画"@ja ,
+                                              "영화"@ko ;
+                                   <http://www.w3.org/2007/05/powder-s#describedby> <http://dbpedia.org/ontology/data/definitions.ttl> ;
+                                   <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Film> .
+
+
+<http://dbpedia.org/ontology/data/definitions.ttl> <http://open.vocab.org/terms/describes> <http://dbpedia.org/ontology/Film> .
+
+
+:Boleta_3D rdfs:comment "Boleta básica que permite el acceso a una sala con pantalla 3D" ;
+           rdfs:label "Boleta 3D"@es .
+
+
+:Boleta_4D rdfs:comment "Boleta que permite el acceso a las salas integradas con tecnología 4D, que incluye pantallas 3D, sillas con movimiento y vibración, efectos especiales en la sala tales como humo o burbujas, y sonido Surround 7.1" ;
+           rdfs:label "Boleta 4D"@es .
+
+
+:Boleta_estandar_surround rdfs:comment "Boleta que permite el acceso a una sala con sonido Surround 7.1 y pantalla 2D" ;
+                          rdfs:label "Boleta estandar surround"@es .
+
+
+:Boleta_preferencial rdfs:comment "Boleta que permite el acceso preferencial a una sala con audio Surround 7.1" ;
+                     rdfs:label "Boleta preferencial"@es .
+
+
+:Boleta_vibrosound rdfs:comment "Boleta que permite el acceso a una sala con audio Surround 7.1 y sillas con vibración dinámica en base a cada película" ;
+                   rdfs:label "Boleta vibrosound"@es .
+
+
+:Boleta_vibrosound_3D rdfs:comment "Boleta que permite el acceso a una sala con pantalla 3D y sillas con vibración incorporada" ;
+                      rdfs:label "Boleta vibrosound 3D"@es .
+
+
+:Cafeteria rdfs:comment "Venta de alimentos para los clientes que acceden al cine" ;
+           rdfs:label "Cafeteria"@es .
+
+
+:Cine rdfs:comment "Establecimiento que se compone de diversas salas equipadas para la reproducción de películas y consumo de alimentos con distintas peculiaridades según su precio" ;
+      rdfs:label "Cine"@es .
+
+
+:Combo_1 rdfs:comment "Combo compuesto de palomitas pequeñas y una gaseosa pequeña" ;
+         rdfs:label "Combo 1"@es .
+
+
+:Combo_2 rdfs:comment "Combo compuesto de palomitas medianas y una gaseosa mediana" ;
+         rdfs:label "Combo 2"@es .
+
+
+:Combo_3 rdfs:comment "Combo compuesto de palomitas grandes y 2 gaseosas grandes" ;
+         rdfs:label "Combo 3"@es .
+
+
+:Combo_4 rdfs:comment "Combo compuesto de 2 Hot Dog pequeños, palomitas medianas y 2 gaseosas grandes" ;
+         rdfs:label "Combo 4"@es .
+
+
+:Combo_5 rdfs:comment "Combo compuesto de 2 hamburguesas especiales, una porción de nachos y 2 gaseosas grandes" ;
+         rdfs:label "Combo 5"@es .
+
+
+:Estacionamiento rdfs:comment "Espacio adecuado para el almacenamiento temporal de vehículos" ;
+                 rdfs:label "Estacionamiento"@es .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#2D>
+                <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#3D>
+                <http://www.semanticweb.org/cristianm120/ontologies/2023/2/untitled-ontology-16#4D>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Afiches_promocionales
+                :Poster
+                :Recipientes_promocionales
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Asiento
+                :Audio
+                :Pantalla
+                :Pelicula
+                :Sala
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Asiento_4D
+                :Asiento_basico
+                :Asiento_con_vibracion
+                :Asiento_preferencial
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Boleta_3D
+                :Boleta_4D
+                :Boleta_estandar
+                :Boleta_estandar_surround
+                :Boleta_preferencial
+                :Boleta_vibrosound
+                :Boleta_vibrosound_3D
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cafeteria
+                :Cine
+                :Estacionamiento
+                :Limpieza
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Combo_1
+                :Combo_2
+                :Combo_3
+                :Combo_4
+                :Combo_5
+                :Combo_6
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Combos
+                :Gaseosa
+                :Hamburguesa
+                :Hot_Dog
+                :Nachos
+                :Palomitas
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Empleado_cafeteria
+                :Empleado_cine
+                :Empleado_estacionamiento
+                :Empleado_limpieza
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Gaseosa_grande
+                :Gaseosa_mediana
+                :Gaseosa_pequeña
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Palomitas_grandes
+                :Palomitas_medianas
+                :Palomitas_pequeñas
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Persona
+                :Servicio
+                :Utileria
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:boleta rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Identificar una boleta 4D por lo que incluye" ;
+   rdfs:label "Boleta4D_2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleta ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :boleta
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :incluye ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :boleta ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :asiento_4D
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleta_4D ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :boleta
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Identificar una boleta 3D por lo que incluye" ;
+   rdfs:label "Boleta3D" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleta ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :boleta
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :incluye ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :boleta ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :pantalla_3D
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :incluye ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :boleta ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :asiento_basico
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleta_3D ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :boleta
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Identificar una boleta 3D vibrosound por lo que incluye" ;
+   rdfs:label "Boleta3D_vibrosound" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleta ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :boleta
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :incluye ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :boleta ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :pantalla_3D
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :incluye ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :boleta ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :asiento_con_vibracion
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleta_3D ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :boleta
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Identificar una boleta preferencial por lo que incluye" ;
+   rdfs:label "BoletaPreferencial" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleta ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :boleta
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :incluye ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :boleta ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :asiento_preferencial
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleta_preferencial ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :boleta
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Identificar una boleta 4D por lo que incluye" ;
+   rdfs:label "Boleta4D_1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleta ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :boleta
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :incluye ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :boleta ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :pantalla_4D
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Boleta_4D ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :boleta
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.24.2023-01-14T21:28:32Z) https://github.com/owlcs/owlapi
