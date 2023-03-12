@@ -66,4 +66,18 @@ SELECT DISTINCT ?name ?lugar WHERE {
 }
 
 # EJERCICIO 5
+
+PREFIX nobel: <http://data.nobelprize.org/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?name (COUNT(DISTINCT ?prize) AS ?premios) WHERE {
+  ?person
+      rdf:type nobel:Laureate ;
+      rdfs:label ?name ;
+      nobel:nobelPrize ?prize .
+} GROUP BY ?person ?name
+HAVING (?premios > 1)
+ORDER BY DESC(?premios)
+
 # EJERCICIO 6
