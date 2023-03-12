@@ -26,6 +26,16 @@ WHERE {
 }
 
 # EJERCICIO 3
+
+SELECT ?juegos ?juegosLabel
+WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". } .
+  { ?juegos wdt:P31 wd:Q159821 }
+  UNION
+  { ?juegos wdt:P31 wd:Q82414 }
+  ?juegos wdt:P31 wd:Q18536594
+}
+
 # EJERCICIO 4
 
 PREFIX db: <http://dbpedia.org/>
