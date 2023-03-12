@@ -27,5 +27,33 @@ WHERE {
 
 # EJERCICIO 3
 # EJERCICIO 4
+
+PREFIX db: <http://dbpedia.org/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX nobel: <http://data.nobelprize.org/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?name ?lugar WHERE {
+  {
+	SELECT DISTINCT ?year WHERE {
+      <http://data.nobelprize.org/resource/laureate/659> nobel:nobelPrize ?prize .
+      ?prize nobel:year ?year .
+	}
+  }
+  ?person
+      rdf:type nobel:Laureate ;
+      rdfs:label ?name ;
+      nobel:nobelPrize ?prize ;
+  	  dbo:birthPlace ?birthPlace .
+  
+  ?birthPlace
+    rdf:type dbo:Country ;
+    rdfs:label ?lugar .
+  ?prize nobel:year ?year .
+  FILTER(LANG(?lugar) = "[AUTO_LANGUAGE]" || LANG(?lugar) = "en")
+  FILTER(?person != <http://data.nobelprize.org/resource/laureate/659>)
+}
+
 # EJERCICIO 5
 # EJERCICIO 6
