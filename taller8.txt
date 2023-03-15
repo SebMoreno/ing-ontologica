@@ -27,14 +27,19 @@ WHERE {
 
 # EJERCICIO 3
 
-SELECT ?juegos ?juegosLabel
+SELECT ?juegos ?juegosLabel (YEAR(?time) AS ?year) ?paisLabel (SUM(?followers) AS ?espectadores)
 WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". } .
   { ?juegos wdt:P31 wd:Q159821 }
   UNION
   { ?juegos wdt:P31 wd:Q82414 }
-  ?juegos wdt:P31 wd:Q18536594
-}
+  ?juegos 
+    wdt:P8687 ?followers ;
+    wdt:P585 ?time ;
+    wdt:P17 ?pais.
+} GROUP BY ?juegos ?juegosLabel ?time ?paisLabel
+ORDER BY DESC(?espectadores)
+LIMIT 3
 
 # EJERCICIO 4
 
