@@ -55,7 +55,7 @@ INSERT DATA {
   GRAPH paises: {
         paises:Capital a owl:Class .
         paises:hasCapital
-            a rdf:ObjectProperty ;
+            a owl:ObjectProperty ;
             rdfs:domain paises:Country ;
             rdfs:range paises:Capital .
   }
@@ -101,5 +101,66 @@ INSERT DATA {
 }
 
 # EJERCICIO 6
+
+PREFIX paises: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries/>
+
+INSERT DATA {
+  GRAPH paises: {
+        paises:idioma
+            a owl:DatatypeProperty ;
+            rdfs:domain paises:Capital ;
+            rdfs:range xsd:string .
+        paises:moneda
+            a owl:DatatypeProperty ;
+            rdfs:domain paises:Capital ;
+            rdfs:range xsd:string .
+        paises:Bogota
+            paises:idioma "Español";
+            paises:moneda "Peso Colombiano".
+        paises:Caracas
+            paises:idioma "Español";
+            paises:moneda "Bolivar".
+        paises:Quito
+            paises:idioma "Español";
+            paises:moneda "Sucre ecuatoriano".
+        paises:Buenos_Aires
+            paises:idioma "Español";
+            paises:moneda "Peso argentino".
+        paises:Santiago_de_Chile
+            paises:idioma "Español";
+            paises:moneda "Peso chileno".
+        paises:Brasilia
+            paises:idioma "Español";
+            paises:moneda "Real".
+        paises:Sucre
+            paises:idioma "Español";
+            paises:moneda "Boliviano".
+        paises:Montevideo
+            paises:idioma "Español";
+            paises:moneda "Peso uruguayo".
+        paises:Asuncion
+            paises:idioma "Español";
+            paises:moneda "Guaraní".
+        paises:Ciudad_de_Mexico
+            paises:idioma "Español";
+            paises:moneda "Peso mexicano".
+        paises:Ciudad_de_Panama
+            paises:idioma "Español";
+            paises:moneda "Balboa panameño".
+        paises:Managua
+            paises:idioma "Español";
+            paises:moneda "Córdoba oro".
+        paises:La_Habana
+            paises:idioma "Español";
+            paises:moneda "Peso cubano".
+        paises:Washington
+            paises:idioma "Español";
+            paises:moneda "Dólar estadounidense".
+        paises:Ottawa
+            paises:idioma "Español";
+            paises:moneda "Dólar canadiense".
+  }
+}
+
 # EJERCICIO 7
 # EJERCICIO 8
