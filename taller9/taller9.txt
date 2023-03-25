@@ -48,6 +48,19 @@ WHERE {
 }
 
 # EJERCICIO 4
+
+PREFIX paises: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries/>
+
+INSERT DATA {
+  GRAPH paises: {
+        paises:Capital a rdf:Class .
+        paises:hasCapital
+            a rdf:ObjectProperty ;
+            rdfs:domain paises:Country ;
+            rdfs:range paises:Capital .
+  }
+}
+
 # EJERCICIO 5
 # EJERCICIO 6
 # EJERCICIO 7
