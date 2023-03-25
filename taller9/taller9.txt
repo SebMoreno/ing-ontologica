@@ -14,6 +14,17 @@ WHERE {
 }
 
 # EJERCICIO 2
+
+PREFIX paises: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries/>
+
+SELECT ?pais ?nameLocal
+FROM paises:
+WHERE {
+ ?pais
+       paises:dependentTerritoryOf ?dependant ;
+       paises:nameLocal ?nameLocal .
+}
+
 # EJERCICIO 3
 # EJERCICIO 4
 # EJERCICIO 5
