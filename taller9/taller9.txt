@@ -53,7 +53,7 @@ PREFIX paises: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries/>
 
 INSERT DATA {
   GRAPH paises: {
-        paises:Capital a rdf:Class .
+        paises:Capital a owl:Class .
         paises:hasCapital
             a rdf:ObjectProperty ;
             rdfs:domain paises:Country ;
@@ -62,6 +62,44 @@ INSERT DATA {
 }
 
 # EJERCICIO 5
+
+PREFIX paises: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries/>
+
+INSERT DATA {
+  GRAPH paises: {
+    paises:Bogota a paises:Capital .
+    paises:Caracas a paises:Capital .
+    paises:Quito a paises:Capital .
+    paises:Buenos_Aires a paises:Capital .
+    paises:Santiago_de_Chile a paises:Capital .
+    paises:Brasilia a paises:Capital .
+    paises:Sucre a paises:Capital .
+    paises:Montevideo a paises:Capital .
+    paises:Asuncion a paises:Capital .
+    paises:Ciudad_de_Mexico a paises:Capital .
+    paises:Ciudad_de_Panama a paises:Capital .
+    paises:Managua a paises:Capital .
+    paises:La_Habana a paises:Capital .
+    paises:Washington a paises:Capital .
+    paises:Ottawa a paises:Capital .
+    paises:Colombia paises:hasCapital paises:Bogota .
+    paises:Venezuela paises:hasCapital paises:Caracas .
+    paises:Ecuador paises:hasCapital paises:Quito .
+    paises:Argentina paises:hasCapital paises:Buenos_Aires .
+    paises:Chile paises:hasCapital paises:Santiago_de_Chile .
+    paises:Brasil paises:hasCapital paises:Brasilia .
+    paises:Bolivia paises:hasCapital paises:Sucre .
+    paises:Uruguay paises:hasCapital paises:Montevideo .
+    paises:Paraguay paises:hasCapital paises:Asuncion .
+    paises:Mexico paises:hasCapital paises:Ciudad_de_Mexico .
+    paises:Panama paises:hasCapital paises:Ciudad_de_Panama .
+    paises:Nicaragua paises:hasCapital paises:Managua .
+    paises:Cuba paises:hasCapital paises:La_Habana .
+    paises:Estados_Unidos paises:hasCapital paises:Washington .
+    paises:Canada paises:hasCapital paises:Ottawa .
+  }
+}
+
 # EJERCICIO 6
 # EJERCICIO 7
 # EJERCICIO 8
