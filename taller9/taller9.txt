@@ -1,3 +1,8 @@
+# ENDPOINTS
+
+virtuoso:       https://virtuoso-image-production-84a0.up.railway.app
+rdf-to-html:    https://rdf-to-html-production-c7e9.up.railway.app
+
 # EJERCICIO 1
 
 PREFIX rob: <http://all-robotics.com#>
