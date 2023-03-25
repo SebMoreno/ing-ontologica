@@ -26,6 +26,27 @@ WHERE {
 }
 
 # EJERCICIO 3
+
+PREFIX rob: <http://all-robotics.com#>
+PREFIX paises: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries/>
+
+SELECT ?robot ?nombre ?pais ?nameLocal
+WHERE {
+  GRAPH <Robots> {
+      ?robot
+          a ?roboType ;
+          rob:Identificacion ?id ;
+          rob:Nombre ?nombre ;
+          rob:Peso ?peso .
+      ?roboType rdfs:subClassOf rob:Robots .
+  }
+  GRAPH paises: {
+        ?pais
+           paises:dependentTerritoryOf ?dependant ;
+           paises:nameLocal ?nameLocal .
+  }
+}
+
 # EJERCICIO 4
 # EJERCICIO 5
 # EJERCICIO 6
